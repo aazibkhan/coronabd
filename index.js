@@ -3,7 +3,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://pomber.github.io/covid19/time
     return response.json();
 }).then((coronaData)=>{
     let holder = document.querySelector('.boxes')
-    let dataBD = coronaData["Bangladesh"]
+    let dataBD = coronaData["Bangladesh"].reverse()
     holder.innerHTML = dataBD.map(bd =>
         `
         <div class="box">
